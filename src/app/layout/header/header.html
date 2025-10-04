@@ -1,0 +1,42 @@
+<header>
+  <div class="top-bar" [class.scrolled]="isScrolled">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="contact-info">
+        <span><i class="fas fa-phone me-2"></i>(XX) XXXX-XXXX</span>
+        <span class="ms-4 d-none d-md-inline"><i class="fas fa-envelope me-2"></i>seuemail@dominio.com</span>
+      </div>
+      <div class="social-icons d-flex">
+        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="nav-container">
+      <a class="nav-logo" routerLink="/" (click)="isMenuOpen = false">
+        <img src="src/assets/images/shailogo.jpg" alt="Logo da Empresa" height="50" />
+      </a>
+
+      <div class="nav-main-group" [class.active]="isMenuOpen">
+        <ul class="nav-links">
+          <li><a class="nav-link" routerLink="/home" routerLinkActive="active-link" (click)="isMenuOpen = false">Home</a></li>
+          <li><a class="nav-link" routerLink="/prevention" routerLinkActive="active-link" (click)="isMenuOpen = false">Prevenção Contra Incêndios</a></li>
+          <li><a class="nav-link" routerLink="/training" routerLinkActive="active-link" (click)="isMenuOpen = false">Primeiros Socorros</a></li>
+          <li><a class="nav-link" routerLink="/healing" routerLinkActive="active-link" (click)="isMenuOpen = false">Saúde e Bem-Estar</a></li>
+          <li><a class="nav-link" routerLink="/about" routerLinkActive="active-link" (click)="isMenuOpen = false">Quem Somos</a></li>
+          <li><a class="nav-link" routerLink="/contact" routerLinkActive="active-link" (click)="isMenuOpen = false">Contate-nos</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger-menu" (click)="toggleMenu()" [class.active]="isMenuOpen" aria-label="Abrir ou fechar menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="header-placeholder"></div>

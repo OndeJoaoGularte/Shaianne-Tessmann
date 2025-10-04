@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --cor-primaria: #003366;   /* Um azul escuro, por exemplo */
+  --cor-secundaria: #0055a4; /* Um azul mais claro */
+  --cor-destaque: #f1c40f;   /* Um amarelo/dourado */
+  --cor-texto: #333333;
+  --cor-texto-claro: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Exemplo de fonte */
+}

@@ -1,0 +1,10 @@
+<section class="cta-section">
+  <div class="container cta-content">
+    @if (title) {
+      <h2>{{ title }}</h2>
+    }
+    @if (buttonText && buttonLink) {
+      <a [routerLink]="buttonLink" class="cta-button">{{ buttonText }}</a>
+    }
+  </div>
+</section>

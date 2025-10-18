@@ -5,6 +5,7 @@ import { TrainService } from './pages/train-service/train-service';
 import { HealService } from './pages/heal-service/heal-service';
 import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
+import { Solutions } from './pages/solutions/solutions';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,4 +15,5 @@ export const routes: Routes = [
     { path: 'healing', component: HealService },
     { path: 'about', component: About },
     { path: 'contact', component: Contact },
+    { path: 'solutions', component: Solutions }
 ];

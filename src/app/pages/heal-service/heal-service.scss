@@ -1,0 +1,322 @@
+/* ============================================== */
+/* PALETA DE CORES ESPECÍFICA PARA ESTA PÁGINA   */
+/* ============================================== */
+
+// :host garante que estas regras só se aplicam a este componente
+:host {
+  // Aqui, nós SOBRESCREVEMOS as variáveis globais.
+  // Todo o HTML desta página (incluindo header e footer, enquanto esta
+  // página estiver ativa) herdará estas cores.
+  --cor-primaria: #2E4636;      // Verde Floresta
+  --cor-secundaria: #a05222;   // Laranja Terra (para links e hovers)
+  --cor-texto: #25382B;         // Verde Quase Preto
+  --cor-texto-claro: #F9F7F4;  // Branco "Sujo"
+}
+
+/* --- Ajustes Específicos da Página com a Nova Paleta --- */
+
+// Vamos usar o Bege Areia na seção de benefícios
+.benefits-section {
+  background-color: #E6D8C5;
+}
+
+// O card do benefício fica melhor com o fundo claro
+.benefit-card {
+  background-color: #F9F7F4;
+}
+
+// Ajusta o overlay do depoimento para usar nosso novo verde primário
+.testimonial-overlay {
+  // A cor é o Verde Floresta (46, 70, 54 em RGB) com 80% de opacidade
+  background-color: #2e4636cc;
+}
+
+// Mantém o fundo principal da página com o branco "sujo"
+// (O Angular geralmente aplica o fundo no body, mas podemos garantir aqui se necessário)
+:host {
+   background-color: #E6D8C5;
+   display: block; // Garante que o background-color funcione
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--cor-primaria);
+}
+
+// Estilos para a nova introdução com ícones
+.intro-section {
+  padding: 4rem 0;
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-item {
+  .feature-icon {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Pequena melhoria para as listas de serviços
+.service-text ul {
+  list-style: none;
+  padding-left: 0;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    i {
+      color: var(--cor-secundaria);
+    }
+  }
+}
+
+// Estilos para a NOVA seção de benefícios (Grid)
+.benefits-section {
+  padding: 4rem 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    h5 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Estilos para a NOVA seção de depoimento
+.testimonial-section {
+  position: relative;
+  padding: 5rem 0;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; // Efeito parallax
+}
+
+.testimonial-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+
+  blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    border: none;
+    padding: 0;
+  }
+
+  cite {
+    font-style: normal;
+    font-weight: 600;
+  }
+}
+
+/* ============================================== */
+/* ESTILOS PARA A NOVA SEÇÃO DE SERVIÇOS (TIMELINE)*/
+/* ============================================== */
+
+.services-section {
+  padding: 4rem 0;
+  background-color: #F9F7F4; // Usando o fundo claro da nossa paleta natural
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 4rem auto; // Centraliza e dá espaço
+  color: var(--cor-texto);
+  opacity: 0.8;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  // A linha vertical central
+  &::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--cor-primaria); // Verde Floresta
+    opacity: 0.2;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+  }
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+
+  // O ponto na linha do tempo
+  .timeline-dot {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background-color: #fff;
+    border: 4px solid var(--cor-secundaria); // Laranja Terra
+    top: 32px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+// Posiciona os itens ímpares (1º, 3º) à esquerda
+.timeline-item:nth-child(odd) {
+  left: 0;
+  padding-right: 70px; // Espaço para a imagem
+}
+
+// Posiciona os itens pares (2º) à direita
+.timeline-item:nth-child(even) {
+  left: 50%;
+  padding-left: 70px; // Espaço para a imagem
+
+  // Ajusta a posição do ponto para os itens da direita
+  .timeline-dot {
+    left: -10px;
+  }
+}
+
+.timeline-content {
+  padding: 2rem;
+  background-color: #fff;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+
+  h3 {
+    font-weight: 700;
+    color: var(--cor-primaria);
+  }
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      i {
+        color: var(--cor-primaria);
+      }
+    }
+  }
+}
+
+.timeline-image {
+  position: absolute;
+  top: 15px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+}
+
+// Posiciona a imagem para os itens da esquerda
+.timeline-item:nth-child(odd) .timeline-image {
+  right: -50px;
+}
+
+// Posiciona a imagem para os itens da direita
+.timeline-item:nth-child(even) .timeline-image {
+  left: -50px;
+}
+
+
+/* --- Responsividade para Mobile --- */
+@media screen and (max-width: 991px) {
+  .timeline-container::after {
+    left: 31px; // Move a linha para a esquerda
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    
+    // Todos os itens ficam à direita da linha
+    &:nth-child(even) {
+      left: 0%;
+    }
+  }
+
+  .timeline-dot {
+    left: 21px; // Alinha o ponto com a nova linha
+  }
+  
+  .timeline-image {
+    // Esconde as imagens em telas menores para uma UI mais limpa
+    display: none; 
+  }
+}

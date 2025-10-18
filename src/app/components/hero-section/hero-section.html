@@ -1,0 +1,30 @@
+<section class="hero-container" [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    @if (title) {
+      <h1>{{ title }}</h1>
+    }
+    @if (subtitle) {
+      <p>{{ subtitle }}</p>
+    }
+    @if (ctaText && ctaLink) {
+      <a [routerLink]="ctaLink" class="cta-button">{{ ctaText }}</a>
+    }
+  </div>
+</section>
+
+<!--
+
+.hero-section {
+  position: relative;
+  height: calc(100dvh - 85px);
+  height: calc(100vh - 85px);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+-->

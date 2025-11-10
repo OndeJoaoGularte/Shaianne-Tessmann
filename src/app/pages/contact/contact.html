@@ -1,1 +1,92 @@
-<p>contact works!</p>
+<section class="contact-hero py-5">
+  <div class="container text-center">
+    <h1 class="page-title">Fale Conosco</h1>
+    <p class="lead col-lg-8 mx-auto">
+      Tem alguma dúvida ou quer solicitar um orçamento? Escolha seu canal preferido. Estamos prontos para atender você.
+    </p>
+  </div>
+</section>
+
+<section class="contact-content py-5">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-7">
+        <div class="form-container shadow-sm p-4 p-md-5 bg-white rounded">
+          <h3 class="mb-4">Envie sua Dúvida</h3>
+          <p class="mb-4">Preencha os campos abaixo e retornaremos o mais breve possível.</p>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            
+            <div class="mb-3">
+              <label for="name" class="form-label">Nome *</label>
+              <input type="text" id="name" class="form-control" formControlName="name" 
+                     [class.is-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+              <div class="invalid-feedback">Por favor, informe seu nome.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail *</label>
+              <input type="email" id="email" class="form-control" formControlName="email"
+                     [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+              <div class="invalid-feedback">Informe um e-mail válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefone / WhatsApp *</label>
+              <input type="tel" id="phone" class="form-control" formControlName="phone"
+                     [class.is-invalid]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
+              <div class="invalid-feedback">Informe um telefone válido.</div>
+            </div>
+
+            <div class="mb-4">
+              <label for="message" class="form-label">Dúvida ou Mensagem *</label>
+              <textarea id="message" rows="5" class="form-control" formControlName="message"
+                        [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
+              <div class="invalid-feedback">Por favor, escreva sua dúvida.</div>
+            </div>
+
+            @if (formStatus === 'success') {
+              <div class="alert alert-success">Mensagem enviada com sucesso! Entraremos em contato em breve.</div>
+            }
+            @if (formStatus === 'error') {
+              <div class="alert alert-danger">Ocorreu um erro. Por favor, tente novamente ou nos chame no WhatsApp.</div>
+            }
+
+            <button type="submit" class="btn btn-primary w-100 py-3 fw-bold" [disabled]="formStatus === 'sending'">
+              @if (formStatus === 'sending') { Enviando... } @else { Enviar Mensagem }
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="contact-options p-4 rounded">
+          <h3 class="mb-3">Atendimento Imediato</h3>
+          <p class="mb-4">Prefere uma conversa agora? Clique no botão abaixo para falar conosco diretamente pelo WhatsApp.</p>
+          
+          <a href="https://wa.me/5551999999999" target="_blank" class="btn btn-whatsapp w-100 py-3 mb-4">
+            <i class="fab fa-whatsapp me-2"></i> Chamar no WhatsApp
+          </a>
+
+          <div class="info-box-alt mt-4">
+            <h5 class="mb-3">Outros Canais</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>contato&#64;tessmann.com.br</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Porto Alegre / RS</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

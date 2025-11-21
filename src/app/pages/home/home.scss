@@ -1,0 +1,239 @@
+/* ============================================== */
+/* PALETA INSTITUCIONAL (Marca Principal)         */
+/* ============================================== */
+:host {
+  // Paleta Institucional (Base)
+  --cor-primaria: #004A4D;      // Teal Escuro (Main)
+  --cor-secundaria: #dc3545;   // Dourado/Mostarda (Destaque)
+  --cor-texto: #212529;
+  --cor-texto-claro: #FFFFFF;
+  --bg-claro: #F8F9FA;
+
+  // Cores Temáticas de Serviço
+  --cor-fogo: #C00000;
+  --cor-saude: #0a4275;
+  --cor-natural: #2E4636;
+
+  background-color: #FFFFFF;
+  display: block;
+}
+
+/* --- ESTILOS GERAIS --- */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--cor-primaria);
+}
+
+/* ============================================== */
+/* 1. SEÇÃO HERO MINIMALISTA                      */
+/* ============================================== */
+.hero-home {
+  background-color: #fff; // Fundo branco e limpo
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .hero-pre-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--cor-secundaria); // Dourado
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-weight: 800;
+    color: var(--cor-primaria);
+    line-height: 1.1;
+  }
+
+  // Botões
+  .btn-primary {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: darken(#004A4D, 5%);
+      border-color: darken(#004A4D, 5%);
+    }
+  }
+
+  .btn-outline-secondary {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+
+    &:hover {
+      background-color: var(--cor-primaria);
+      color: var(--cor-texto-claro);
+    }
+  }
+}
+
+/* ============================================== */
+/* 2. PILARES DE VALOR                            */
+/* ============================================== */
+.pillars-section {
+  background-color: var(--bg-claro);
+  padding-bottom: 2rem;
+}
+.feature-item {
+  .feature-icon {
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ============================================== */
+/* 3. SEÇÃO DE SERVIÇOS (HUB VERTICAL)            */
+/* ============================================== */
+.services-hub-section {
+  background-color: #fff; // Branco limpo
+}
+
+.service-block {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+.service-icon-col {
+  padding: 2rem 1rem;
+  font-size: 3rem;
+  color: var(--cor-texto-claro);
+  // Alinha o ícone verticalmente
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-content-col {
+  padding: 1.5rem 2rem;
+
+  h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    opacity: 0.8;
+  }
+
+  .btn-service {
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      opacity: 0.8;
+      transform: translateX(5px);
+    }
+  }
+}
+
+// Cores temáticas aplicadas ao bloco
+.service-block-fire {
+  .service-icon-col { background-color: var(--cor-fogo); }
+  h3, .btn-service { color: var(--cor-fogo); }
+}
+.service-block-aid {
+  .service-icon-col { background-color: var(--cor-saude); }
+  h3, .btn-service { color: var(--cor-saude); }
+}
+.service-block-health {
+  .service-icon-col { background-color: var(--cor-natural); }
+  h3, .btn-service { color: var(--cor-natural); }
+}
+
+
+// Ajuste responsivo para o mobile
+@media (max-width: 767.98px) {
+  // Faz o ícone virar um header no card
+  .service-icon-col {
+    padding: 2rem 1rem;
+    border-radius: 10px 10px 0 0;
+    border-right: none !important;
+  }
+  .service-content-col {
+    padding: 1.5rem;
+    text-align: center;
+    .btn-service {
+      display: inline-block; // Centraliza o botão
+    }
+  }
+}
+
+/* ============================================== */
+/* 4. SEÇÃO "SOBRE" (PRÉVIA)                      */
+/* ============================================== */
+.about-preview-section {
+  background-color: var(--bg-claro);
+  padding-bottom: 8rem;
+  
+  .about-image {
+    max-width: 300px;
+    border: 8px solid #fff;
+    // Puxa a imagem para cima, sobrepondo a seção anterior
+    margin-top: -120px; 
+    margin-bottom: 3rem;
+  }
+  .section-title { margin-bottom: 1rem; }
+  .lead {
+    font-style: italic;
+    color: var(--cor-texto);
+    opacity: 0.9;
+    border-left: 3px solid var(--cor-secundaria);
+    padding-left: 1rem;
+  }
+  .btn-outline-primary {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    &:hover {
+      background-color: var(--cor-primaria);
+      color: #fff;
+    }
+  }
+}
+
+
+/* ============================================== */
+/* 5. SEÇÃO DEPOIMENTO (Estilo Institucional)     */
+/* ============================================== */
+.testimonial-section {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.testimonial-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 74, 77, 0.85); // Overlay com cor primária
+}
+.testimonial-content {
+  position: relative; z-index: 2; max-width: 800px; margin: 0 auto;
+  blockquote { font-size: 1.5rem; font-style: italic; font-weight: 300; line-height: 1.6; margin: 0 0 1.5rem 0; border: none; padding: 0; }
+  cite { font-style: normal; font-weight: 600; }
+}

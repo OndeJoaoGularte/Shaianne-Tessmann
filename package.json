@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:shaianne-tessmann": "node dist/shaianne-tessmann/server/server.mjs"
+    "deploy": "ng build --base-href /Shaianne-Tessmann/ && npx angular-cli-ghpages --dir=dist/shaianne-tessmann/browser"
   },
   "prettier": {
     "overrides": [

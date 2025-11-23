@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'C:/Program Files/Git/Shaiane-Tessmann',
+  basePath: 'https://OndeJoaoGularte.github.io/Shaianne-Tessmann',
   supportedLocales: {
   "en-US": ""
 },

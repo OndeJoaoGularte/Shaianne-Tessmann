@@ -1,76 +1,14 @@
-/* ============================================== */
-/* PALETA DE CORES ESPECÍFICA PARA ESTA PÁGINA   */
-/* ============================================== */
-
-// :host garante que estas regras só se aplicam a este componente
 :host {
-  // Aqui, nós SOBRESCREVEMOS as variáveis globais.
-  // Todo o HTML desta página (incluindo header e footer, enquanto esta
-  // página estiver ativa) herdará estas cores.
-  --cor-primaria: #2E4636;      // Verde Floresta
-  --cor-secundaria: #a05222;   // Laranja Terra (para links e hovers)
-  --cor-texto: #25382B;         // Verde Quase Preto
-  --cor-texto-claro: #F9F7F4;  // Branco "Sujo"
+  --cor-primaria: #2E4636;
+  --cor-secundaria: #a05222;
+  --cor-texto: #25382B;
+  --cor-texto-claro: #F9F7F4;
+
+  --background: #E6D8C5;
+  --background2: #F9F7F4;
+  display: block;
 }
 
-/* --- Ajustes Específicos da Página com a Nova Paleta --- */
-
-// Vamos usar o Bege Areia na seção de benefícios
-.benefits-section {
-  background-color: #E6D8C5;
-}
-
-// O card do benefício fica melhor com o fundo claro
-.benefit-card {
-  background-color: #F9F7F4;
-}
-
-// Ajusta o overlay do depoimento para usar nosso novo verde primário
-.testimonial-overlay {
-  // A cor é o Verde Floresta (46, 70, 54 em RGB) com 80% de opacidade
-  background-color: #2e4636cc;
-}
-
-// Mantém o fundo principal da página com o branco "sujo"
-// (O Angular geralmente aplica o fundo no body, mas podemos garantir aqui se necessário)
-:host {
-   background-color: #E6D8C5;
-   display: block; // Garante que o background-color funcione
-}
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--cor-primaria);
-}
-
-// Estilos para a nova introdução com ícones
-.intro-section {
-  padding: 4rem 0;
-}
-
-.intro-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.feature-item {
-  .feature-icon {
-    font-size: 2.5rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-}
-
-// Pequena melhoria para as listas de serviços
 .service-text ul {
   list-style: none;
   padding-left: 0;
@@ -83,89 +21,6 @@
       color: var(--cor-secundaria);
     }
   }
-}
-
-// Estilos para a NOVA seção de benefícios (Grid)
-.benefits-section {
-  padding: 4rem 0;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.benefit-card {
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .card-content {
-    padding: 1.5rem;
-    h5 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-  }
-}
-
-// Estilos para a NOVA seção de depoimento
-.testimonial-section {
-  position: relative;
-  padding: 5rem 0;
-  text-align: center;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; // Efeito parallax
-}
-
-.testimonial-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.testimonial-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-
-  blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    border: none;
-    padding: 0;
-  }
-
-  cite {
-    font-style: normal;
-    font-weight: 600;
-  }
-}
-
-.services-section {
-  padding: 4rem 0;
-  background-color: #F9F7F4; // Fundo claro da paleta
 }
 
 .service-card {

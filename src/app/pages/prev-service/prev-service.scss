@@ -1,53 +1,12 @@
-/* ============================================== */
-/* PALETA DE CORES "ALERTA/SEGURANÇA"           */
-/* ============================================== */
-
 :host {
-  // Sobrescreve as variáveis globais SÓ PARA ESTA PÁGINA
-  --cor-primaria: #C00000;      // Vermelho Bombeiro
-  --cor-secundaria: #E85D04;   // Laranja Alerta
-  --cor-texto: #212529;         // Cinza Escuro
-  --cor-texto-claro: #FFFFFF;  // Branco
+  --cor-primaria: #C00000;
+  --cor-secundaria: #E85D04;
+  --cor-texto: #212529;
+  --cor-texto-claro: #FFFFFF;
 
-  // Fundo principal da página
-  background-color: #FFFFFF;
+  --background: #FFFFFF;
+  --background2: #F8F9FA;
   display: block;
-}
-
-/* ============================================== */
-/* ESTILOS DE TEMA DA PÁGINA                      */
-/* ============================================== */
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--cor-primaria); // Usa o novo Vermelho
-}
-
-/* --- Seção de Introdução --- */
-.intro-section {
-  padding: 4rem 0;
-  background-color: #FFFFFF; // Fundo branco
-}
-
-.feature-item {
-  .feature-icon {
-    font-size: 2.5rem;
-    color: var(--cor-secundaria); // Usa o Laranja
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* --- Seção de Serviços (Tabs) --- */
-.services-section {
-  padding: 4rem 0;
-  background-color: #F8F9FA; // Fundo cinza claro
 }
 
 .service-tabs {
@@ -117,76 +76,5 @@
       border-radius: 8px 8px 0 0;
       flex-shrink: 0;
     }
-  }
-}
-
-/* --- Seção de Benefícios --- */
-.benefits-section {
-  padding: 4rem 0;
-  background-color: #FFFFFF; // Fundo branco
-}
-
-.benefit-card {
-  background-color: #F8F9FA; // Fundo cinza claro
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
-  }
-  .card-img-top { // Bootstrap 5
-    height: 180px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1.5rem;
-    h5 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-  }
-}
-
-/* --- Seção de Depoimento --- */
-.testimonial-section {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.testimonial-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  // Overlay com o Vermelho Primário
-  background-color: rgba(192, 0, 0, 0.8); // #C00000 com 80% de opacidade
-}
-
-.testimonial-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-
-  blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    border: none;
-    padding: 0;
-  }
-  cite {
-    font-style: normal;
-    font-weight: 600;
   }
 }

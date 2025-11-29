@@ -1,14 +1,14 @@
 :root {
-  --cor-primaria: #004A4D;   /* Um azul escuro, por exemplo */
-  --cor-secundaria: #dc3545; /* Um azul mais claro */
-  --cor-destaque: #f1c40f;   /* Um amarelo/dourado */
+  --cor-primaria: #004a4d;
+  --cor-secundaria: #ff6b6b;
+  --cor-destaque: #f1c40f;
   --cor-texto: #333333;
   --cor-texto-claro: #ffffff;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif; /* Exemplo de fonte */
+  font-family: "Roboto", sans-serif;
 }
 
 .section-title {
@@ -44,7 +44,7 @@ body {
 
 .services-section {
   padding: 4rem 0;
-  background-color: var(--background2)
+  background-color: var(--background2);
 }
 
 .benefits-section {

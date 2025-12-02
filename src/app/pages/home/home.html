@@ -1,131 +1,154 @@
-<section class="hero-home py-5 py-md-6 text-center">
-  <img src="assets/images/logo-transparente2.png" alt="Tessmann Consultoria & Treinamentos Logo"
-    class="hero-logo img-fluid pb-4" style="max-width: 15%;">
-  <div class="container col-lg-8 mx-auto">
-    <h3 class="hero-pre-title">TESSMANN CONSULTORIA & TREINAMENTOS</h3>
-    <h1 class="hero-title display-4">Treinamento para agir, <br> consultoria para prevenir.</h1>
-    <p class="lead my-4">
-      Unimos conhecimento técnico e sensibilidade humana para criar ambientes de trabalho mais seguros, saudáveis e resilientes.
-    </p>
-    <a [routerLink]="'/contact'" class="btn btn-primary btn-lg me-3">Fale com um Especialista</a>
-    <a [routerLink]="'/about'" class="btn btn-outline-secondary btn-lg">Sobre Nós</a>
-  </div>
-</section>
-
-<section class="pillars-section py-5">
-  <div class="container text-center">
-    <div class="row mt-4">
-      <div class="col-lg-4 feature-item">
-        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-        <h5>Conformidade e Segurança</h5>
-        <p>Garantimos sua adequação total às normas (NRs, Lei Lucas, AVCB), reduzindo riscos legais e operacionais.</p>
-      </div>
-      <div class="col-lg-4 feature-item">
-        <div class="feature-icon"><i class="fas fa-heart-pulse"></i></div>
-        <h5>Equipes Prontas e Saudáveis</h5>
-        <p>Capacitamos seus colaboradores para agir em emergências e promovemos a saúde mental no dia a dia.</p>
-      </div>
-      <div class="col-lg-4 feature-item">
-        <div class="feature-icon"><i class="fas fa-building-shield"></i></div>
-        <h5>Negócios Resilientes</h5>
-        <p>Um ambiente seguro e saudável resulta em maior produtividade e menor taxa de absenteísmo.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="services-hub-section py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title">Nossas Frentes de Atuação</h2>
-      <p class="lead col-lg-8 mx-auto">Tudo que sua empresa precisa para criar uma cultura de prevenção e cuidado.</p>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8 mb-4">
-        <div class="service-block shadow-lg service-block-aid">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-3 service-icon-col text-center">
-              <i class="fas fa-first-aid"></i>
-            </div>
-            <div class="col-md-9 service-content-col">
-              <h3>Primeiros Socorros</h3>
-              <p>Treinamentos práticos (Lei Lucas), capacitação para academias, empresas e restaurantes. Prepare sua equipe para salvar vidas.</p>
-              <a [routerLink]="'/training'" class="btn-service">Saiba Mais <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
+<section class="hero-home py-5 py-lg-6 text-center bg-white">
+    <img src="assets/images/logo-transparente2.png" alt="Tessmann Consultoria & Treinamentos Logo"
+        class="hero-logo img-fluid pb-4" style="max-width: 200px; width: 40%;">
+    <div class="container col-lg-8 mx-auto">
+        <h3 class="hero-pre-title mb-2 fw-bold">TESSMANN CONSULTORIA & TREINAMENTOS</h3>
+        <h1 class="hero-title mb-4">Treinamento para agir, <br> consultoria para prevenir.
+        </h1>
+        <p class="lead mb-4 text-muted">
+            Unimos conhecimento técnico e sensibilidade humana para criar ambientes de trabalho mais seguros, saudáveis
+            e resilientes.
+        </p>
+        <div class="d-grid gap-2 d-md-block">
+            <a [routerLink]="'/contact'" class="btn btn-primary btn-lg px-4 me-md-3 fw-bold">Fale com um
+                Especialista</a>
+            <a [routerLink]="'/about'" class="btn btn-outline-secondary btn-lg px-4 fw-bold">Sobre Nós</a>
         </div>
-      </div>
     </div>
+</section>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8 mb-4">
-        <div class="service-block shadow-lg service-block-health">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-3 service-icon-col text-center">
-              <i class="fas fa-spa"></i>
+<section class="pillars-section py-5 bg-light">
+    <div class="container text-center">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-icon mb-3"><i class="fas fa-shield-alt"></i></div>
+                <h5 class="fw-bold">Conformidade e Segurança</h5>
+                <p class="text-muted">Garantimos sua adequação total às normas (NRs, Lei Lucas, AVCB), reduzindo
+                    riscos legais e operacionais.</p>
             </div>
-            <div class="col-md-9 service-content-col">
-              <h3>Saúde Mental e Bem-Estar</h3>
-              <p>Palestras, workshops e Práticas Integrativas (PICS) para conformidade com a NR1, redução de estresse e aumento da produtividade.</p>
-              <a [routerLink]="'/healing'" class="btn-service">Saiba Mais <i class="fas fa-arrow-right ms-2"></i></a>
+            <div class="col-md-4">
+                <div class="feature-icon mb-3"><i class="fas fa-heart-pulse"></i></div>
+                <h5 class="fw-bold">Equipes Prontas e Saudáveis</h5>
+                <p class="text-muted">Capacitamos seus colaboradores para agir em emergências e promovemos a saúde
+                    mental no dia a dia.</p>
             </div>
-          </div>
+            <div class="col-md-4">
+                <div class="feature-icon mb-3"><i class="fas fa-building-shield"></i></div>
+                <h5 class="fw-bold">Negócios Resilientes</h5>
+                <p class="text-muted">Um ambiente seguro e saudável resulta em maior produtividade e menor taxa de
+                    absenteísmo.</p>
+            </div>
         </div>
-      </div>
     </div>
+</section>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8 mb-4">
-        <div class="service-block shadow-lg service-block-fire">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-3 service-icon-col text-center">
-              <i class="fas fa-hard-hat"></i>
-            </div>
-            <div class="col-md-9 service-content-col">
-              <h3>Treinamentos de NRs</h3>
-              <p>Capacitação técnica completa nas normas <strong>NR 01, NR 23 e NR 35</strong>. Consultoria para conformidade legal e formação de brigadas.</p>
-              <a [routerLink]="'/prevention'" class="btn-service">Saiba Mais <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title fw-bold">Nossas Frentes de Atuação</h2>
+            <p class="lead text-muted col-lg-8 mx-auto">Tudo que sua empresa precisa para criar uma cultura de prevenção
+                e cuidado.</p>
         </div>
-      </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-9">
+                <div class="service-block service-aid shadow-sm border rounded overflow-hidden">
+                    <div class="row g-0 align-items-center">
+                        <div
+                            class="col-md-3 service-icon-box text-center py-4 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-first-aid fa-3x text-white"></i>
+                        </div>
+                        <div class="col-md-9 p-4 text-center text-md-start">
+                            <h3 class="h4 fw-bold">Primeiros Socorros</h3>
+                            <p class="text-muted">Treinamentos práticos (Lei Lucas), capacitação para academias,
+                                empresas e restaurantes.
+                                Prepare sua equipe para salvar vidas.</p>
+                            <a [routerLink]="'/training'" class="btn-service stretched-link">Saiba Mais <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-9">
+                <div class="service-block service-health shadow-sm border rounded overflow-hidden">
+                    <div class="row g-0 align-items-center">
+                        <div
+                            class="col-md-3 service-icon-box text-center py-4 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-spa fa-3x text-white"></i>
+                        </div>
+                        <div class="col-md-9 p-4 text-center text-md-start">
+                            <h3 class="h4 fw-bold">Saúde Mental e Bem-Estar</h3>
+                            <p class="text-muted">Palestras, workshops e Práticas Integrativas (PICS), redução
+                                de estresse e aumento da produtividade.
+                            </p>
+                            <a [routerLink]="'/healing'" class="btn-service stretched-link">Saiba Mais <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-9">
+                <div class="service-block service-fire shadow-sm border rounded overflow-hidden">
+                    <div class="row g-0 align-items-center">
+                        <div
+                            class="col-md-3 service-icon-box text-center py-4 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-hard-hat fa-3x text-white"></i>
+                        </div>
+                        <div class="col-md-9 p-4 text-center text-md-start">
+                            <h3 class="h4 fw-bold">Treinamentos de NRs</h3>
+                            <p class="text-muted">Capacitação técnica completa nas normas <strong>NR 01, NR 23 e NR
+                                    35</strong>.
+                                Consultoria para conformidade legal e formação de brigadas.</p>
+                            <a [routerLink]="'/prevention'" class="btn-service stretched-link">Saiba Mais <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-  </div>
 </section>
 
-<section class="about-preview-section py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-5 text-center">
-        <img src="assets/images/about/shai.png" class="img-fluid rounded-circle shadow-lg about-image" alt="Shaiane Tessmann, Fundadora da Tessmann Consultoria">
-      </div>
-      <div class="col-lg-7">
-        <h2 class="section-title text-start">Conhecimento Técnico e Sensibilidade Humana</h2>
-        <p class="lead">"Acredito que a verdadeira segurança vai além das normas. Ela começa no cuidado genuíno com as pessoas."</p>
-        <p>Na Tessmann Consultoria, unimos anos de experiência em segurança e saúde ocupacional com um foco na humanização dos processos. Não se trata apenas de cumprir a lei, mas de criar ambientes onde todos se sintam seguros e valorizados.</p>
-        <a [routerLink]="'/about'" class="btn btn-outline-primary mt-3">Nossa História Completa</a>
-      </div>
+<section class="about-preview-section py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 text-center mt-5 mb-lg-0">
+                <img src="assets/images/about/shai.png" class="img-fluid rounded-circle shadow-lg about-image"
+                    alt="Shaiane Tessmann, Fundadora da Tessmann Consultoria">
+            </div>
+            <div class="col-lg-7 text-center text-lg-start">
+                <h2 class="section-title fw-bold mb-3">Conhecimento Técnico e Sensibilidade Humana</h2>
+                <p class="lead fst-italic border-start border-4 border-danger ps-3 mb-4">"Acredito que a verdadeira segurança vai além das normas. Ela começa no cuidado genuíno
+                    com as pessoas."</p>
+                <p class="text-muted">Na Tessmann Consultoria, unimos anos de experiência em segurança e saúde ocupacional com um foco na
+                    humanização dos processos. Não se trata apenas de cumprir a lei, mas de criar ambientes onde todos
+                    se sintam seguros e valorizados.</p>
+                <a [routerLink]="'/about'" class="btn btn-outline-primary mt-3">Nossa História Completa</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
-<section class="testimonial-section py-5">
-  <div class="testimonial-overlay"></div>
-  <div class="container testimonial-content">
-    <blockquote>
-      "O programa de bem-estar transformou nossa equipe. Vimos uma melhora notável no clima e no engajamento de todos. Recomendo fortemente!"
-    </blockquote>
-    <cite>
-      <strong>Nome do Cliente</strong><br>
-      CEO, Nome da Empresa
-    </cite>
-  </div>
+<section class="testimonial-section py-5 position-relative text-white text-center">
+    <div class="testimonial-overlay"></div>
+    <div class="container position-relative" style="z-index: 2;">
+        <blockquote class="fs-4 fst-italic fw-light mb-4">
+            "O programa de bem-estar transformou nossa equipe. Vimos uma melhora notável no clima e no engajamento de
+            todos. Recomendo fortemente!"
+        </blockquote>
+        <cite class="fw-bold d-block not-italic">
+            Nome do Cliente <span class="d-block fw-normal small">CEO, Empresa XYZ</span>
+        </cite>
+    </div>
 </section>
 
-<app-cta-section
-  title="Vamos conversar sobre a segurança da sua empresa?"
-  buttonText="Entre em Contato"
-  buttonLink="/contact">
+<app-cta-section title="Vamos conversar sobre a segurança da sua empresa?" buttonText="Entre em Contato"
+    buttonLink="/contact">
 </app-cta-section>

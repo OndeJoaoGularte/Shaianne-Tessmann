@@ -2,13 +2,13 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     @if (title) {
-      <h1 class="display-4 fw-bold">{{ title }}</h1>
+      <h1 class="fw-bold">{{ title }}</h1>
     }
     @if (subtitle) {
-      <p class="lead my-4">{{ subtitle }}</p>
+      <h6 class="lead my-4">{{ subtitle }}</h6>
     }
     @if (ctaText && ctaLink) {
-      <a [routerLink]="ctaLink" class="btn cta-button btn-lg fw-bold">{{ ctaText }}</a>
+      <a [routerLink]="ctaLink" class="btn cta-button btn-lg px-4 me-md-3 fw-bold">{{ ctaText }}</a>
     }
   </div>
 </section>

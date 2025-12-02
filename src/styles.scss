@@ -15,8 +15,6 @@ body {
 Páginas Gerais
 */
 
-
-
 /*
 Páginas Serviços
 */
@@ -32,16 +30,10 @@ Páginas Serviços
   background-color: var(--background);
 }
 
-.feature-item {
-  .feature-icon {
-    font-size: 2.5rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 1rem;
 }
 
 .section-subtitle {

@@ -1,178 +1,21 @@
-/* ============================================== */
-/* PALETA DE CORES "CONFIANÇA & PROFISSIONALISMO" */
-/* ============================================== */
-
 :host {
-  // Sobrescreve as variáveis globais SÓ PARA ESTA PÁGINA
-  --cor-primaria: #004A4D;      // Teal Escuro
-  --cor-secundaria: #dc3545;   // Dourado/Mostarda
-  --cor-texto: #212529;         // Cinza Escuro
-  --cor-texto-claro: #FFFFFF;  // Branco
-
-  // Fundo principal da página
-  background-color: #FFFFFF;
   display: block;
 }
 
-/* ============================================== */
-/* ESTILOS DE TEMA DA PÁGINA                      */
-/* ============================================== */
-
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--cor-primaria); // Usa o novo Teal
-}
-
-/* --- Seção Hero --- */
-.about-hero {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-  padding: 4rem 0;
-
-  .page-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-  }
-  .lead {
-    color: var(--cor-texto-claro);
-    opacity: 0.9;
-  }
-}
-
-/* --- Seção da Fundadora --- */
-.founder-section {
-  .section-title {
-    margin-bottom: 0.5rem;
-  }
-  .founder-image {
-    max-width: 350px; //arrumarrrrrrr
-    border: 8px solid #fff;
-  }
-  .founder-subtitle {
-    font-weight: 600;
-    color: var(--cor-secundaria); // Dourado
-    margin-bottom: 1rem;
-  }
-  .founder-quote {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--cor-texto);
-    opacity: 0.8;
-    border-left: 4px solid var(--cor-secundaria);
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-  }
-  .btn-social {
-    color: var(--cor-primaria);
-    font-weight: 600;
-    text-decoration: none;
-    i {
-      margin-right: 0.5rem;
-      font-size: 1.2rem;
-    }
-    &:hover {
-      color: var(--cor-secundaria);
-    }
-  }
-}
-
-/* --- Seção de Missão/Propósito --- */
-.mission-section {
-  background-color: #F8F9FA; // Cinza claro
-  .lead {
-    color: var(--cor-texto);
-    opacity: 0.9;
-    font-size: 1.2rem;
-  }
-}
-
-/* --- Seção de Valores --- */
-.values-section {
-  background-color: #FFFFFF; // Fundo branco
-}
-
-.feature-item {
-  .feature-icon {
-    font-size: 2.5rem;
-    color: var(--cor-secundaria); // Usa o Dourado
-    margin-bottom: 1rem;
-  }
-  h5 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* --- Seção de Benefícios --- */
-.benefits-section {
-  padding: 4rem 0;
-  background-color: #FFFFFF; // Fundo branco
-}
-
-.benefit-card {
-  background-color: #F8F9FA; // Fundo cinza claro
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-
+.btn-outline-primary {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 74, 77, 0.2);
   }
-  .card-img-top {
-    height: 180px;
-    object-fit: cover;
-  }
-  .card-content {
-    padding: 1.5rem;
-    h5 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-  }
+  
+  transition: all 0.3s ease;
 }
 
-/* --- Seção de Depoimento --- */
-.testimonial-section {
-  position: relative;
-  text-align: center;
-  color: #fff;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.testimonial-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  // Overlay com o Azul Primário
-  background-color: rgba(10, 66, 117, 0.8); // #0a4275 com 80% de opacidade
-}
-
-.testimonial-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-
-  blockquote {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    border: none;
-    padding: 0;
-  }
-  cite {
-    font-style: normal;
-    font-weight: 600;
-  }
+figure.border-danger {
+  border-color: var(--cor-secundaria) !important;
 }

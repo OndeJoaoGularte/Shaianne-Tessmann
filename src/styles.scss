@@ -20,20 +20,12 @@ Páginas Serviços
 */
 
 .section-title {
-  font-weight: 700;
-  margin-bottom: 3rem;
   color: var(--cor-primaria);
-}
-
-.intro-section {
-  padding: 4rem 0;
-  background-color: var(--background);
 }
 
 .feature-icon {
   font-size: 2.5rem;
   color: var(--cor-secundaria);
-  margin-bottom: 1rem;
 }
 
 .card-right {
@@ -48,16 +40,6 @@ Páginas Serviços
   .card-right, .card-left {
     border: 0 !important;
   }
-}
-
-.section-subtitle {
-  color: var(--cor-texto);
-  opacity: 0.8;
-}
-
-.services-section {
-  padding: 4rem 0;
-  background-color: var(--background2);
 }
 
 .service-card-horizontal {
@@ -79,17 +61,9 @@ Páginas Serviços
   }
 }
 
-.benefits-section {
-  padding: 4rem 0;
-  background-color: var(--background);
-}
-
 .benefit-card {
-  background-color: var(--background2);
-  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
 
   &:hover {
     transform: translateY(-5px);
@@ -99,19 +73,10 @@ Páginas Serviços
     height: 180px;
     object-fit: cover;
   }
-  .card-content {
-    padding: 1.5rem;
-    h5 {
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-  }
 }
 
 .testimonial-section {
   position: relative;
-  text-align: center;
-  color: #fff;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -130,11 +95,6 @@ Páginas Serviços
     margin: 0 0 1.5rem 0;
     border: none;
     padding: 0;
-  }
-
-  cite {
-    font-style: normal;
-    font-weight: 600;
   }
 }
 

@@ -60,6 +60,25 @@ Páginas Serviços
   background-color: var(--background2);
 }
 
+.service-card-horizontal {
+  border-radius: 1rem;
+  h3 {
+    color: var(--cor-primaria);
+  }
+}
+
+.service-list {
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    i {
+      color: var(--cor-secundaria);
+    }
+  }
+}
+
 .benefits-section {
   padding: 4rem 0;
   background-color: var(--background);

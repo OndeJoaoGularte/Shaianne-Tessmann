@@ -1,1 +1,114 @@
-<p>solutions works!</p>
+<section class="catalog-header py-5 text-center bg-white">
+    <div class="container">
+        <img src="assets/images/logo-transparente2.png" alt="Tessmann Consultoria Logo" 
+             class="img-fluid mb-4" style="max-height: 100px;">
+        <h1 class="display-5 fw-bold" style="color: var(--cor-primaria);">Catálogo de Serviços</h1>
+        <p class="lead text-muted col-lg-8 mx-auto">
+            Explore nossos serviços e clique para solicitar um orçamento personalizado diretamente pelo WhatsApp.
+        </p>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <ul class="nav nav-pills justify-content-center mb-5" id="catalog-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold px-4 mx-2" id="tab-train" data-bs-toggle="pill"
+                    data-bs-target="#content-aid" type="button" role="tab">
+                    <i class="fas fa-first-aid me-2"></i> Primeiros Socorros
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 mx-2" id="tab-heal" data-bs-toggle="pill"
+                    data-bs-target="#content-heal" type="button" role="tab">
+                    <i class="fas fa-spa me-2"></i> Saúde e Bem-Estar
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold px-4 mx-2" id="tab-prev" data-bs-toggle="pill"
+                    data-bs-target="#content-train" type="button" role="tab">
+                    <i class="fas fa-hard-hat me-2"></i> Treinamentos NRs
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="catalog-content">
+
+            <div class="tab-pane fade show active" id="content-aid" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col" *ngFor="let service of aidServices">
+                        <div class="card h-100 border-0 shadow-sm product-card theme-aid">
+                            <div class="card-img-wrapper">
+                                <img [src]="service.image" class="card-img-top" [alt]="service.title">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-first-aid fs-4 me-2" style="color: var(--cor-saude);"></i>
+                                    <h5 class="card-title fw-bold mb-0">{{ service.title }}</h5>
+                                </div>
+                                <p class="card-text text-muted flex-grow-1 small">{{ service.description }}</p>
+                                <a [href]="getWhatsappLink(service.whatsappMessage)" target="_blank" 
+                                   class="btn btn-whatsapp-card w-100 fw-bold mt-3">
+                                    <i class="fab fa-whatsapp me-2"></i> Solicitar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="content-heal" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col" *ngFor="let service of healServices">
+                        <div class="card h-100 border-0 shadow-sm product-card theme-heal">
+                            <div class="card-img-wrapper">
+                                <img [src]="service.image" class="card-img-top" [alt]="service.title">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-spa fs-4 me-2" style="color: var(--cor-natural);"></i> <h5 class="card-title fw-bold mb-0">{{ service.title }}</h5>
+                                </div>
+                                <p class="card-text text-muted flex-grow-1 small">{{ service.description }}</p>
+                                <a [href]="getWhatsappLink(service.whatsappMessage)" target="_blank" 
+                                   class="btn btn-whatsapp-card w-100 fw-bold mt-3">
+                                    <i class="fab fa-whatsapp me-2"></i> Solicitar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="content-train" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col" *ngFor="let service of trainServices">
+                        <div class="card h-100 border-0 shadow-sm product-card theme-train">
+                            <div class="card-img-wrapper">
+                                <img [src]="service.image" class="card-img-top" [alt]="service.title">
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-hard-hat fs-4 me-2" style="color: var(--cor-fogo);"></i>
+                                    <h5 class="card-title fw-bold mb-0">{{ service.title }}</h5>
+                                </div>
+                                <p class="card-text text-muted flex-grow-1 small">{{ service.description }}</p>
+                                <a [href]="getWhatsappLink(service.whatsappMessage)" target="_blank" 
+                                   class="btn btn-whatsapp-card w-100 fw-bold mt-3">
+                                    <i class="fab fa-whatsapp me-2"></i> Solicitar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<app-cta-section
+  title="Não encontrou o que precisa? Personalizamos para você."
+  buttonText="Fale com um Consultor"
+  buttonLink="/contact">
+</app-cta-section>

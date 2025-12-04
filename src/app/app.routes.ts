@@ -15,5 +15,6 @@ export const routes: Routes = [
     { path: 'healing', component: HealService },
     { path: 'about', component: About },
     { path: 'contact', component: Contact },
-    { path: 'solutions', component: Solutions }
+    { path: 'solutions', component: Solutions },
+    { path: 'solutions/:section', component: Solutions }
 ];

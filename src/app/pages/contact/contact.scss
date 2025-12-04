@@ -1,7 +1,6 @@
 :host {
-  /* Mantendo as variáveis para consistência local */
   --cor-primaria: #004A4D;
-  --cor-secundaria: #dc3545; /* Vermelho que você usou, ou use #E65100 se quiser Laranja */
+  --cor-secundaria: #dc3545;
   
   display: block;
 }
@@ -25,15 +24,15 @@
   transition: all 0.3s ease;
   
   &:hover:not(:disabled) {
-    background-color: darken(#004A4D, 5%);
+    background-color: adjust(#004A4D, 5%);
     transform: translateY(-2px);
   }
 }
 
 /* Botão WhatsApp (Verde Oficial) */
 .btn-whatsapp {
-  background-color: #25D366;
-  border-color: #25D366;
+  background-color: #29b75d;
+  border-color: #29b75d;
   color: #fff;
   font-weight: 700;
   border-radius: 50px; /* Botão arredondado */

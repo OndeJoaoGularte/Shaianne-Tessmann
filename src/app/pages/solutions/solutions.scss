@@ -1,0 +1,95 @@
+:host {
+  --cor-primaria: #004A4D;
+  --cor-secundaria: #dc3545; 
+  --cor-fogo: #c00000;
+  --cor-saude: #0a4275;
+  --cor-natural: #2e4636;
+  
+  display: block;
+}
+
+/* Customização das Abas */
+.nav-pills {
+  .nav-link {
+    color: var(--cor-primaria);
+    background-color: #fff;
+    border: 1px solid rgba(0, 74, 77, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: rgba(0, 74, 77, 0.05);
+    }
+
+    &.active {
+      background-color: var(--cor-primaria) !important;
+      color: #fff !important;
+      border-color: var(--cor-primaria);
+      box-shadow: 0 4px 10px rgba(0, 74, 77, 0.2);
+    }
+  }
+}
+
+/* Estilo do Card de Produto */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; // Garante que a imagem respeite a borda arredondada
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+  }
+
+  // Estilo da Imagem
+  .card-img-top {
+    height: 200px;         // Altura fixa para manter o grid alinhado
+    width: 100%;
+    object-fit: cover;     // Corta a imagem para preencher sem distorcer
+    transition: transform 0.5s ease;
+  }
+
+  // Efeito de zoom leve na imagem ao passar o mouse
+  &:hover .card-img-top {
+    transform: scale(1.05);
+  }
+
+  .card-title {
+    color: var(--cor-primaria);
+    line-height: 1.3;
+  }
+}
+
+/* Bordas Temáticas no Topo dos Cards */
+.theme-aid { border-top: 4px solid var(--cor-saude) !important; }
+.theme-heal { border-top: 4px solid var(--cor-natural) !important; }
+.theme-train { border-top: 4px solid var(--cor-fogo) !important; }
+
+
+/* Botão de WhatsApp */
+.btn-whatsapp-card {
+  background-color: #29b75d;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #128C7E;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+    .nav-pills .nav-link {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.card-img-top{
+    border-radius: 0;
+}

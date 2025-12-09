@@ -10,11 +10,11 @@ import { Solutions } from './pages/solutions/solutions';
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: Home },
-    { path: 'prevention', component: PrevService },
-    { path: 'training', component: TrainService },
-    { path: 'healing', component: HealService },
-    { path: 'about', component: About },
-    { path: 'contact', component: Contact },
-    { path: 'solutions', component: Solutions },
-    { path: 'solutions/:section', component: Solutions }
+    { path: 'treinamento', component: PrevService },
+    { path: 'primeiros-socorros', component: TrainService },
+    { path: 'saude', component: HealService },
+    { path: 'sobre', component: About },
+    { path: 'contato', component: Contact },
+    { path: 'catalogo', component: Solutions },
+    { path: 'catalogo/:section', component: Solutions }
 ];
